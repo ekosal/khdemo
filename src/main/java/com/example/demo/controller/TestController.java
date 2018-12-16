@@ -17,8 +17,8 @@ public class TestController {
 	public String indix()
 	{
 		System.out.println("hello");
-		System.out.println("max id == " + userService.loadingUserIdMax());
-		return "index";
+		//System.out.println("max id == " + userService.loadingUserIdMax());
+		return "login";
 	}
 
 }
