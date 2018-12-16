@@ -14,7 +14,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-@MapperScan( value = "com.example.demo.configuration")
+@MapperScan( value = "com.example.demo.mappers")
 public class MyBatisConfiguration {
 	
 	@Autowired
