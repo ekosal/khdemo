@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -14,10 +15,10 @@ public class TestController {
 	private UserService  userService;
 	
 	@GetMapping("/")
-	public String indix()
+	public String indix(ModelMap map)
 	{
 		System.out.println("hello");
-		System.out.println("max id == " + userService.loadingUserIdMax());
+		map.addAttribute("count", userService.loadingUserIdMax());
 		return "login";
 	}
 
